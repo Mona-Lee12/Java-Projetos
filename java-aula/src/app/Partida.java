@@ -4,15 +4,15 @@ import java.util.Random;
 
 public class Partida {
 
-    private String timeVisitante; //convereter para Time
-    private String timeLocal;     // --
+    private Time timeVisitante; 
+    private Time timeLocal;     
     private int scoreVisitante;
     private int scoreLocal;
 
     Random random = new Random();
     // private Date dataPartida;
     
-    void iniciarPartida (String casa, String fora) {        
+    void iniciarPartida (timeLocal, timeVisitante) {        
         this.timeLocal = casa;
         this.timeVisitante = fora;
         this.scoreLocal = random.nextInt(10);
