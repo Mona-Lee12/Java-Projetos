@@ -10,7 +10,7 @@
             "request": "launch",
             "mainClass": "app.App",
             "projectName": "java-aula",
-            "console": "internalConsole"
+            "console": "externalTerminal"
         }
     ]
 }
