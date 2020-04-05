@@ -54,7 +54,7 @@ public class App {
         System.out.println("*********************************************************");
         System.out.println("GitHub: https://github.com/Mona-Lee12/Java-Projetos");
         System.out.println("*********************************************************"); 
-        System.out.println("Video:");
+        System.out.println("Video: https://youtu.be/eQEKsEMNG9A");
 
        s.close();
     }

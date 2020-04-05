@@ -16,8 +16,15 @@ public class Partida {
         this.timeLocal = timeLocal;
         this.timeVisitante = timeVisitante;
         this.scoreLocal = random.nextInt(10);
-        this.scoreVisitante = random.nextInt(10); 
-        
+        this.scoreVisitante = random.nextInt(10);       
+    }
+
+    void mostrarResultado() {        
+        System.out.println(this.timeLocal.getNome() +" "+ scoreLocal+" x "+scoreVisitante+" "+this.timeVisitante.getNome());
+    }
+
+    void finalizarPartida() {
+        // ...
         if (this.scoreLocal > this.scoreVisitante){
             this.timeLocal.setQtdVitorias(1);
             this.timeLocal.setQtdPontos(3);
@@ -37,15 +44,6 @@ public class Partida {
             this.timeLocal.setQtdEmpates(1);
             this.timeLocal.setQtdPontos(1);
         }
-
-    }
-
-    void mostrarResultado() {        
-        System.out.println(this.timeLocal.getNome() +" "+ scoreLocal+" x "+scoreVisitante+" "+this.timeVisitante.getNome());
-    }
-
-    void finalizarPartida() {
-        // ...
     }
 
 }
