@@ -12,15 +12,36 @@ public class Partida {
     Random random = new Random();
     // private Date dataPartida;
     
-    void iniciarPartida (timeLocal, timeVisitante) {        
-        this.timeLocal = casa;
-        this.timeVisitante = fora;
+    void iniciarPartida (Time timeLocal, Time timeVisitante) {        
+        this.timeLocal = timeLocal;
+        this.timeVisitante = timeVisitante;
         this.scoreLocal = random.nextInt(10);
-        this.scoreVisitante = random.nextInt(10);             
+        this.scoreVisitante = random.nextInt(10); 
+        
+        if (this.scoreLocal > this.scoreVisitante){
+            this.timeLocal.setQtdVitorias(1);
+            this.timeLocal.setQtdPontos(3);
+            this.timeVisitante.setQtdDerrotas(1);
+        }
+         
+        if (this.scoreLocal < this.scoreVisitante){
+            this.timeVisitante.setQtdVitorias(1);
+            this.timeVisitante.setQtdPontos(3);
+            this.timeLocal.setQtdDerrotas(1);
+        }
+        
+        if (this.scoreLocal == this.scoreVisitante) {
+            
+            this.timeVisitante.setQtdEmpates(1);
+            this.timeVisitante.setQtdPontos(1);
+            this.timeLocal.setQtdEmpates(1);
+            this.timeLocal.setQtdPontos(1);
+        }
+
     }
 
     void mostrarResultado() {        
-        System.out.println(timeLocal +" "+ scoreLocal+" x "+scoreVisitante+" "+timeVisitante);
+        System.out.println(this.timeLocal.getNome() +" "+ scoreLocal+" x "+scoreVisitante+" "+this.timeVisitante.getNome());
     }
 
     void finalizarPartida() {

@@ -9,6 +9,7 @@ public class Time implements TimeInterface {
 
     //Construtor 
     public Time() {
+        this.nome  = "";
         this.qtdVitorias = 0;
         this.qtdEmpates = 0;
         this.qtdDerrotas = 0;
